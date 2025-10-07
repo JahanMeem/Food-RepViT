@@ -54,11 +54,11 @@ def build_food_dataset(is_train, args):
     transform = build_food_transform(is_train, args)
     
     if is_train:
-        csv_path = '/content/food_dataset/train.csv'
+        csv_path = '/kaggle/working/food_dataset/train.csv'
     else:
-        csv_path = '/content/food_dataset/test.csv'
+        csv_path = '/kaggle/working/food_dataset/test.csv'
     
-    img_root = '/content/food_dataset/images'
+    img_root = '/kaggle/working/food_dataset/images'
     
     dataset = FoodDataset(csv_path, img_root, transform=transform)
     nb_classes = dataset.num_classes
